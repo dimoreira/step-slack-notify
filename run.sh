@@ -25,6 +25,7 @@ if [ ! -n "$WERCKER_RESULT" = "passed" ]; then
 	export ICON_EMOJI=":white_check_mark:"
 else
 	export WERCKER_SLACK_NOTIFY_MESSAGE="$WERCKER_SLACK_NOTIFY_FAILED_MESSAGE"
+	export ICON_EMOJI=":x:"
 fi
 
 curl -X POST -H "Content-Type: application/json" -d "payload={ \"channel\": \"#equalizze-api\", \"username\": \"wercker\", \"text\": \"$WERCKER_SLACK_NOTIFY_MESSAGE\", \"icon_emoji\": \"$ICON_EMOJI\" }" $WERCKER_SLACK_WEBHOOK_URL
