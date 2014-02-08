@@ -2,16 +2,16 @@ name: slack-notify
 version: 1.0.0
 description: Send a message to a Slack channel after build or deploy
 keywords:
-	- notification
-	- slack
-	- webhook
+  - notification
+  - slack
+  - webhook
 properties:
-	webhook-url:
-		type: string
-	passed-message:
-		type: string
-	failed-message:
-		type: string
-	on:
-		type: string
-		default: always
+  webhook-url:
+    type: string
+  passed-message:
+    type: string
+  failed-message:
+    type: string
+  on:
+    type: string
+    default: always
