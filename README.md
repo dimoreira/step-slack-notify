@@ -8,7 +8,7 @@ Send a message to a Slack channel after build or deploy
 
 ### required
 
-> Set the `webhook-url` as property of the step or as deploy target or application environment variable
+> This variables can be set at the step on your ```wercker.yml``` file or at the deploy targer variables. Just declare them like: ```WERCKER_SLACK_NOTIFY_SUBDOMAIN```, ```WERCKER_SLACK_NOTIFY_TOKEN``` and ```WERCKER_SLACK_NOTIFY_CHANNEL```
 
 - `subdomain` - Your Slack team subdomain.
 - `token` - Your slack integration token.
@@ -19,7 +19,7 @@ Send a message to a Slack channel after build or deploy
 - `passed-message` - Use this option to override the default passed message
 - `failed-message` - Use this option to override the default failed message
 
-## Example
+## Example with step variables
 
 ```yml
 build:
@@ -29,3 +29,15 @@ build:
 			token: "YOUR SLACK TOKEN"
 			channel: "general"
 ```
+
+## Example with wercker deploy target variables
+
+```yml
+build:
+	after-steps:
+		- slack-notify:
+			subdomain: $WERCKER_SLACK_NOTIFY_SUBDOMAIN
+			token: $WERCKER_SLACK_NOTIFY_TOKEN
+			channel: $WERCKER_SLACK_NOTIFY_CHANNEL
+```
+
