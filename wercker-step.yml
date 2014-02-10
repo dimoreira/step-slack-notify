@@ -6,8 +6,15 @@ keywords:
   - slack
   - webhook
 properties:
-  webhook-url:
+  subdomain:
     type: string
+    required: true
+  token:
+    type: string
+    required: true
+  channed:
+    type: string
+    required: true
   passed-message:
     type: string
   failed-message:
