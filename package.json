@@ -1,0 +1,7 @@
+{
+  "name": "slack-notify",
+  "version": "1.0.1",
+  "devDependencies" : {
+    "dotenv": "*"
+  }
+}
