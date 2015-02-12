@@ -2,7 +2,7 @@
 
 [![wercker status](https://app.wercker.com/status/4c6285fa5dfd3e7c587a43c217ca75cf "wercker status")](https://app.wercker.com/project/bykey/4c6285fa5dfd3e7c587a43c217ca75cf)
 
-Send a message to a Slack channel after build or deploy
+Send a message to a Slack channel after build or deploy with Wercker.
 
 ## Options
 
